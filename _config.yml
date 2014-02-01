@@ -1,1 +1,9 @@
-baseurl:/IvanChan.github.io
+destination: ./_site
+auto:        true
+lsi:         false
+server_port: 4000
+pygments:    true
+markdown:    rdiscount
+permalink:   date
+rdiscount:
+  extensions: [smart]
