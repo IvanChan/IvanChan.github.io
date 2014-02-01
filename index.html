@@ -1,7 +1,11 @@
 ---
 layout: default
-title: atmos.org ~ Corey Donohoe on the Internet
+title: 我的Blog
 ---
-
-<img src="http://f.cl.ly/items/2i3O350d3k0o3L2D401M/Image%202013.10.20%207%3A47%3A06%20PM.png" alt="color photo ftl" />
-<p>I'm Corey Donohoe, a software developer in San Francisco. I work at <a href="https://github.com">GitHub</a>.  I'm <em>atmos</em> on most services.</p>
+　　<h2>{{ page.title }}</h2>
+　　<p>最新文章</p>
+　　<ul>
+　　　　{% for post in site.posts %}
+　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　{% endfor %}
+　　</ul>
