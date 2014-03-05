@@ -1,9 +1,9 @@
-markdown: rdiscount
-pygments: true
-pygments_cache: /Users/henrik/Library/Caches/Pygments
-permalink: /:year/:month/:title.html
-multiviews: true
-sass: true
-haml: true
-post_defaults:
-  layout: post
+destination: ./_site
+auto:        true
+lsi:         false
+server_port: 4000
+pygments:    true
+markdown:    rdiscount
+permalink:   date
+rdiscount:
+  extensions: [smart]
