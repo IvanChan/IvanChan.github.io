@@ -5,7 +5,5 @@ server_port: 4000
 pygments:    true
 markdown:    rdiscount
 permalink:   date
-sass: true
-haml: true
 rdiscount:
   extensions: [smart]
