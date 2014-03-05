@@ -6,7 +6,7 @@ title: Talks I've Given
 <ul style="margin:0px; padding:0px">
 　　　{% for post in site.posts %}
 　　		<li style="list-style:none; font-size:24px;">
-			<span class="postrecord">{{ post.date | date_to_string }}</span> 
+			<h2 color: #494949>{{ post.date | date_to_string }}</h2> 
 			<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
 			<br/>
 			<p>{{ post.excerpt }}</p> 
