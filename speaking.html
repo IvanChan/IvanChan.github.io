@@ -6,7 +6,7 @@ title: 我的Blog
 <p>最新文章</p>
 <ul>
 　　　{% for post in site.posts %}
-　　　　　　　<li style="list-style:none;">
+　　　　　　　<li style="list-style:none; font-size:30px; margin-bottom:15px;">
 	<span class="mydate">{{ post.date | date_to_string }}</span> <a href="{{ site.baseurl }}	{{ post.url }}">{{ post.title }}</a>
 </li>
 　　　　{% endfor %}
