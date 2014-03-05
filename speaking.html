@@ -10,7 +10,7 @@ title: Talks I've Given
 			<span class="postrecord">{{ post.date | date_to_string }}</span> 
 			<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 			<br/>
-			<span class="postexcerpt">{{ post.excerpt | remove: '<h1>' | remove: '</h1>' | remove : '<hr/>' }}</span> 
+			<span class="postexcerpt">{{ post.excerpt | remove : '<hr/>' }}</span> 
 		</li>
 		<hr/>
 　　　　{% endfor %}
