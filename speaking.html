@@ -4,7 +4,7 @@ title: Talks I've Given
 ---
 
 {% for post in site.posts %}
-<h2><a href="http://hubot.github.com">Hubot</a></h2>
-<p>Hubot is a chat robot for most popular chat networks(gchat,campfire,hipchat,etc).  A hubot can do all sorts of neat things and has a decent amount of community contributed scripts.</p>
+<h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+<p>{{ post.excerpt }}</p>
 <hr/>
 {% endfor %}
