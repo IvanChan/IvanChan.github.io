@@ -6,8 +6,10 @@ title: Talks I've Given
 <hr/>
 <ul style="margin:0px; padding:0px">
 　　　{% for post in site.posts %}
-　　　　　　　<li style="list-style:none; font-size:30px;">
-	<span class="mydate">{{ post.date | date_to_string }}</span> <a href="{{ site.baseurl }}	{{ post.url }}">{{ post.title }}</a>
-</li>
+　　		<li style="list-style:none; font-size:30px;">
+			<span class="mydate">{{ post.date | date_to_string }}</span> 
+			<a href="{{ site.baseurl }}	{{ post.url }}">{{ post.title }}</a>
+			<small>{{ page.excerpt }}</small>
+		</li>
 　　　　{% endfor %}
 </ul>
