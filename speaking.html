@@ -4,9 +4,9 @@ title: Talks I've Given
 ---
 <h1>{{ page.title }}</h1>
 <hr/>
-<ul>
+<ul style="margin-left:0px;">
 　　　{% for post in site.posts %}
-　　　　　　　<li style="list-style:none; font-size:30px; margin-bottom:15px;">
+　　　　　　　<li style="list-style:none; font-size:30px;">
 	<span class="mydate">{{ post.date | date_to_string }}</span> <a href="{{ site.baseurl }}	{{ post.url }}">{{ post.title }}</a>
 </li>
 　　　　{% endfor %}
