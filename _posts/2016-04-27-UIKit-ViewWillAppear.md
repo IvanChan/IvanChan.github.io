@@ -42,9 +42,8 @@ ViewWillAppear/Disappear
         [self.view addSubview:self.vc4.view];
     }
 
-  ```
 
-   But `vc4 viewWillAppear` will never log out!
+   But vc4 `viewWillAppear` will never log out!
    
 
 ###We can have a little more test
