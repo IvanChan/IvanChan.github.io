@@ -9,7 +9,7 @@ ViewWillAppear/Disappear
 -----
   Occasionally we will add our logic during `viewWillAppear` like adding a observer & remove it in `viewWillDisappear`.
 
-###Let's check this out with a simple example
+### Let's check this out with a simple example
 
     UIViewController *vc1 = [[UIViewController alloc] init];
     UIViewController *vc2 = [[UIViewController alloc] init];
@@ -32,7 +32,7 @@ ViewWillAppear/Disappear
     2016-04-27 10:49:56.693 TestMe[67943:4951489] vc3 viewWillAppear
 
 
-###Sometimes we got code like this, in vc3
+### Sometimes we got code like this, in vc3
 
     - (void)viewDidLoad {
         [super viewDidLoad];
@@ -46,7 +46,7 @@ ViewWillAppear/Disappear
    But vc4 `viewWillAppear` will never log out!
    
 
-###We can have a little more test
+### We can have a little more test
 
     - (void)viewDidLoad {
         [super viewDidLoad];
