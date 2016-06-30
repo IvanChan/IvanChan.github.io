@@ -108,6 +108,8 @@ But it's crazy & stupid to do that if there is more than 3-level views!
     
     // We have one more step here
     [self addChildViewController:self.vc4]
+    [self.vc4 didMoveToParentViewController:self];
+
 }
 
 ```
@@ -136,6 +138,50 @@ But it's crazy & stupid to do that if there is more than 3-level views!
 If you have customized your own TabBarController or NavigationController, don't forget to connect them. 
 
 As last, remember to call `removeParentViewController` or it might cause a leak.
+
+ 
+For More informations from Apple
+-----
+
+####Adding a Child View Controller to Your Content
+
+To incorporate a child view controller into your content programmatically, create a parent-child relationship between the relevant view controllers by doing the following:
+
+1. Call the addChildViewController: method of your container view controller.
+   This method tells UIKit that your container view controller is now managing the view of the child view controller.
+2. Add the child’s root view to your container’s view hierarchy.
+Always remember to set the size and position of the child’s frame as part of this process.
+3. Add any constraints for managing the size and position of the child’s root view.
+4. Call the didMoveToParentViewController: method of the child view controller.
+
+```
+- (void) displayContentController: (UIViewController*) content {
+   [self addChildViewController:content];
+   content.view.frame = [self frameForContentController];
+   [self.view addSubview:self.currentClientView];
+   [content didMoveToParentViewController:self];
+}
+```
+
+####Removing a Child View Controller
+
+To remove a child view controller from your content, remove the parent-child relationship between the view controllers by doing the following:
+
+1. Call the child’s willMoveToParentViewController: method with the value nil.
+2. Remove any constraints that you configured with the child’s root view.
+3. Remove the child’s root view from your container’s view hierarchy.
+4. Call the child’s removeFromParentViewController method to finalize the end of the parent-child relationship.
+
+```
+- (void) hideContentController: (UIViewController*) content {
+   [content willMoveToParentViewController:nil];
+   [content.view removeFromSuperview];
+   [content removeFromParentViewController];
+}
+```
+
+[Apple - View Controller Programming Guide for iOS](https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/ImplementingaContainerViewController.html)
+ 
  
 ### Shared by
  Ivan Chan (aintivanc@icloud.com)
