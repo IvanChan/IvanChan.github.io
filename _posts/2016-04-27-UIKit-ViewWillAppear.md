@@ -3,11 +3,20 @@ layout: default
 title: UIKit-ViewAppear/Disappear
 ---
 
-  Just record something unexpected happenned when using UIKit.
+  Sometimes we are confused about the firing of `viewAppear/Disappear`.
+  
+  Basically, they are fired when super-view is on-screen/off-screen. (You can set a breakpoint to check the stack)
+  
+  What's more, we feel like some ViewControllers just don't get the `viewAppear/Disappear` message, we can find out why.
+    
  
 Don't AddSubview Before ParentViewController Appear ?
 -----
-  Occasionally we will add our logic during `viewWillAppear` like adding a observer & remove it in `viewWillDisappear`.
+  Occasionally we have logics in `viewDidAppear` like adding a observer & remove it in `viewDidDisappear`.
+  
+  ** Don't do it in WillAppear/WillDisappear, because they are not pairing fired in some circumstance.**
+  
+  **e.g. During interactive transitioning**
 
 ### Let's check this out with a simple example
 
