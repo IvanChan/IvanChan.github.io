@@ -143,7 +143,8 @@ As last, remember to call `removeParentViewController` or it might cause a leak.
 For More informations from Apple
 -----
 
-####Adding a Child View Controller to Your Content
+### Adding a Child View Controller to Your Content
+
 
 To incorporate a child view controller into your content programmatically, create a parent-child relationship between the relevant view controllers by doing the following:
 
@@ -163,7 +164,8 @@ Always remember to set the size and position of the child’s frame as part of t
 }
 ```
 
-####Removing a Child View Controller
+### Removing a Child View Controller
+
 
 To remove a child view controller from your content, remove the parent-child relationship between the view controllers by doing the following:
 
