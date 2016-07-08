@@ -1,5 +1,7 @@
-# Playing Online Audio in iOS
-
+---
+layout: default
+title: Playing Online Audio in iOS
+---
 > 
 Though we are talking about using **AVPlayer（iOS）** for playing online audio here, I found that if the server-side has the wrong configuration, Android might have the same problem, too.
 
